@@ -1,4 +1,4 @@
-﻿<script setup lang="ts">
+<script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
@@ -27,7 +27,7 @@ const imageInputRef = ref<HTMLInputElement>()
 
 // 参数配置（默认使用最快设置）
 const aspectRatio = ref<'9:16' | '16:9'>('16:9')  // 横屏通常更快
-const duration = ref<number>(5)  // 默认5秒（1-10秒可调）
+const duration = ref<5 | 10>(5)  // 默认5秒（只能是5或10）
 const size = ref<'small' | 'large'>('small')  // 默认标清（最快）
 
 // 生成状态
