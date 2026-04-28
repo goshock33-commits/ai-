@@ -1,0 +1,143 @@
+// ============================================
+// 深色主题色彩系统
+// ============================================
+
+// 主色调 - 深色背景
+$bg-primary: #2C2C2C;      // 主背景
+$bg-secondary: #3A3A3A;    // 次级背景（卡片）
+$bg-elevated: #424242;     // 悬浮元素背景
+$bg-overlay: rgba(0, 0, 0, 0.8); // 遮罩层
+
+// 金色系 - 品牌色
+$gold: #D4AF37;            // 主金色
+$gold-light: #E8C547;      // 浅金色
+$gold-dark: #B8941F;       // 深金色
+$gold-glow: rgba(212, 175, 55, 0.3); // 金色光晕
+
+// 文字色
+$text-primary: #FFFFFF;    // 主要文字
+$text-secondary: #B0B0B0;  // 次要文字
+$text-tertiary: #757575;   // 三级文字
+$text-disabled: #4A4A4A;   // 禁用文字
+
+// 语义色（深色主题调整）
+$success: #66BB6A;         // 成功
+$warning: #FFA726;         // 警告
+$error: #EF5350;           // 错误
+$info: #42A5F5;            // 信息
+
+// 兼容性别名（保持向后兼容）
+$primary: $gold;
+$primary-light: $gold-light;
+$primary-dark: $gold-dark;
+$background: $bg-primary;
+$surface: $bg-secondary;
+
+// ============================================
+// 字体系统
+// ============================================
+
+// 字体家族
+$font-family: 'PingFang SC', 'Microsoft YaHei', 'Source Han Sans CN', sans-serif;
+$font-family-heading: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+$font-family-mono: 'SF Mono', 'Monaco', 'Consolas', monospace;
+
+// 字号层级
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 24px;
+$font-size-2xl: 32px;
+$font-size-3xl: 48px;
+
+// 字重
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// 行高
+$line-height-tight: 1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+// ============================================
+// 间距系统（基础单位: 8px）
+// ============================================
+
+$spacing-unit: 8px;
+
+$spacing-0: 0;
+$spacing-1: 8px;   // 1 unit
+$spacing-2: 16px;  // 2 units
+$spacing-3: 24px;  // 3 units
+$spacing-4: 32px;  // 4 units
+$spacing-5: 40px;  // 5 units
+$spacing-6: 48px;  // 6 units
+$spacing-8: 64px;  // 8 units
+$spacing-10: 80px; // 10 units
+$spacing-12: 96px; // 12 units
+$spacing-16: 128px; // 16 units
+
+// ============================================
+// 圆角系统
+// ============================================
+
+$radius-none: 0;
+$radius-sm: 4px;   // 小圆角（标签、徽章）
+$radius-md: 8px;   // 中圆角（按钮、输入框）
+$radius-lg: 16px;  // 大圆角（卡片）
+$radius-xl: 24px;  // 超大圆角（模态框）
+$radius-full: 9999px; // 完全圆角（头像、药丸按钮）
+
+// ============================================
+// 阴影系统（深色主题 - 更深、更明显）
+// ============================================
+
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+$shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+$shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.6);
+$shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.7);
+
+// 金色光晕阴影
+$shadow-gold-sm: 0 2px 8px rgba(212, 175, 55, 0.2);
+$shadow-gold-md: 0 4px 16px rgba(212, 175, 55, 0.3);
+$shadow-gold-lg: 0 8px 24px rgba(212, 175, 55, 0.4);
+
+// ============================================
+// 渐变系统
+// ============================================
+
+@use 'sass:color';
+
+$gradient-warm: linear-gradient(135deg, $bg-primary 0%, color.adjust($bg-primary, $lightness: 5%) 100%);
+$gradient-gold: linear-gradient(135deg, $gold 0%, $gold-light 100%);
+$gradient-overlay: linear-gradient(180deg, rgba(44, 44, 44, 0) 0%, rgba(44, 44, 44, 0.8) 100%);
+
+// ============================================
+// 动画系统
+// ============================================
+
+// 缓动函数
+$ease-in: cubic-bezier(0.4, 0, 1, 1);
+$ease-out: cubic-bezier(0.0, 0, 0.2, 1);
+$ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+$ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+// 持续时间
+$duration-fast: 150ms;
+$duration-base: 300ms;
+$duration-slow: 500ms;
+$duration-slower: 800ms;
+
+// ============================================
+// 响应式断点
+// ============================================
+
+$breakpoint-xs: 320px;  // 手机竖屏
+$breakpoint-sm: 640px;  // 手机横屏
+$breakpoint-md: 768px;  // 平板竖屏
+$breakpoint-lg: 1024px; // 平板横屏/小笔记本
+$breakpoint-xl: 1280px; // 桌面
+$breakpoint-2xl: 1536px; // 大屏桌面
