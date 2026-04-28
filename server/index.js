@@ -11,7 +11,10 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 // 加载环境变量
+// 本地开发：优先加载 .env.local，其次 .env
+// 部署环境：使用系统环境变量（Render/Railway等平台配置）
 dotenv.config({ path: join(__dirname, '../.env.local') })
+dotenv.config({ path: join(__dirname, '../.env') })
 
 const app = express()
 const PORT = process.env.PORT || 3001
